@@ -3,7 +3,7 @@
   tasks:
   - name: Set a hostname
     hostname:
-      name: mailserver10
+      name: mailserver
   - name: Add an Ethernet connection with static IP configuration
     nmcli:
       conn_name: eth0
