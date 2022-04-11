@@ -29,6 +29,10 @@
         - bash-completion
         - bash-completion-extras
         - mlocate
+  - name: Activate Bash Completion
+    shell: updatedb
+    register: myupdatedb
+
   - name: Activate Bash Complete
     shell: source /etc/profile.d/bash_completion.sh
     register: mybash
