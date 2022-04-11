@@ -26,4 +26,8 @@
       packages:
         - vim
         - net-tools
-        
+        - bash-completion
+        - bash-completion-extras
+  - name: Return motd to registered var
+    command: source /etc/profile.d/bash_completion.sh
+    register: mymotd
