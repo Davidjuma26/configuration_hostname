@@ -18,3 +18,12 @@
       src: local_dns
       dest: /etc/hosts
       backup: yes
+
+  - name: Install a list of packages with a list variable
+    yum:
+      name: "{{ packages }}"
+    vars:
+      packages:
+        - vim
+        - net-tools
+        
