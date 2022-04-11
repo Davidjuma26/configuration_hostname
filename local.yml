@@ -13,3 +13,8 @@
       gw4: 192.168.122.1
       state: present
       autoconnect: yes
+  - name: Copy from Local to Remote Target Machine with 'copy'
+    copy:
+      src: local_dns
+      dest: /etc/hosts
+      backup: yes
