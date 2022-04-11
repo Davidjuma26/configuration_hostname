@@ -3,4 +3,13 @@
   tasks:
   - name: Set a hostname
     hostname:
-      name: mailserver
+      name: mailserver10
+  - name: Add an Ethernet connection with static IP configuration
+      nmcli:
+        conn_name: learning
+        ifname: eth0
+        type: ethernet
+        ip4: 192.168.122.150/24
+        gw4: 192.168.122.1
+        state: present
+        autoconnect: yes
